@@ -74,7 +74,7 @@ test: manifests generate fmt vet envtest ## Run tests.
 build: generate fmt vet ## Build manager binary.
 	go build -o bin/manager main.go
 
-NAME_PREFIX ?= settings-controller-
+NAME_PREFIX ?= settings-configuration.
 APIEXPORT_NAME ?= pipeline-service.io
 
 .PHONY: run
@@ -95,7 +95,7 @@ ifndef ignore-not-found
   ignore-not-found = false
 endif
 .PHONY: patch-identity
-patch-identity: 
+patch-identity:
 	./hack/patch-identity.sh ${COMPUTE_APIBINDING}
 
 .PHONY: install

@@ -7,7 +7,7 @@ spec:
     workspace:
       exportName: settings-configuration.pipeline-service.io
       # TODO: the path needs to match the location of the apiexport
-      path: root:pipeline-service:management
+      path: root:default:pipeline-service-compute
   permissionClaims:
   - group: "apis.kcp.dev"
     resource: "apibindings"
